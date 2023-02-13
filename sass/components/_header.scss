@@ -1,0 +1,72 @@
+.header {
+  @include containerCenter;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0px;
+
+  @media (min-width: 1200px) {
+    width: 100%;
+    border-bottom: 1px solid $Grayish-blue;
+  }
+
+  &__left-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__logo {
+    @media (min-width: 1200px) {
+      margin-right: 40px;
+    }
+  }
+
+  &__hamburger {
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__right-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media (min-width: 1200px) {
+      gap: 40px;
+    }
+  }
+
+  &__cart {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__cart-quantity {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: $Orange;
+    padding: 0px 5px;
+    border-radius: 25px;
+  }
+
+  &__user-profile-img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+    @media (min-width: 1200px) {
+      width: 50px;
+      height: 50px;
+
+      &:hover {
+        border: 2px solid $Orange;
+        border-radius: 50px;
+      }
+    }
+  }
+}
